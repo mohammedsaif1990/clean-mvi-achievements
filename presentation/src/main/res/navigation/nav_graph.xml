@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_homeFragment">
+
+    <fragment
+        android:id="@+id/nav_homeFragment"
+        android:name="com.kordia.achievements.presentation.activity.fragment.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <action
+        android:id="@+id/action_globalToHomeFragment"
+        app:destination="@id/nav_homeFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <fragment
+        android:id="@+id/nav_achievementsFragment"
+        android:name="com.kordia.achievements.presentation.activity.fragment.achievements.AchievementsFragment"
+        android:label="@string/menu_achievements"
+        tools:layout="@layout/fragment_achievements" />
+
+    <action
+        android:id="@+id/action_globalToAchievementsFragment"
+        app:destination="@id/nav_achievementsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <fragment
+        android:id="@+id/nav_goalsFragment"
+        android:name="com.kordia.achievements.presentation.activity.fragment.goals.GoalsFragment"
+        android:label="@string/menu_goals"
+        tools:layout="@layout/fragment_goals" />
+
+    <action
+        android:id="@+id/action_globalToGoalsFragment"
+        app:destination="@id/nav_goalsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <fragment
+        android:id="@+id/nav_achievementAddFragment"
+        android:name="com.kordia.achievements.presentation.activity.fragment.achievements.add.AchievementAddFragment"
+        android:label="@string/achievement"
+        tools:layout="@layout/fragment_achievement_add">
+
+        <argument
+            android:name="achievement_id"
+            android:defaultValue="-1"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_globalToAchievementAddFragment"
+        app:destination="@id/nav_achievementAddFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <fragment
+        android:id="@+id/nav_goalAddFragment"
+        android:name="com.kordia.achievements.presentation.activity.fragment.goals.add.GoalAddFragment"
+        android:label="@string/goal"
+        tools:layout="@layout/fragment_goal_add">
+
+        <argument
+            android:name="goal_id"
+            android:defaultValue="-1"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_globalToGoalAddFragment"
+        app:destination="@id/nav_goalAddFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+</navigation>
